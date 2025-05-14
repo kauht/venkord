@@ -8,13 +8,14 @@ A custom Vencord fork including the recently removed nsfwGateBypass plugin.
 
 ## Installation
 ```bash
-# Clone the repository
 git clone https://github.com/kauht/venkord
+```
 
-# Navigate to the project directory
+```bash
 cd venkord
+```
 
-# Install dependencies and inject the NSFW Gate Bypass plugin
+```bash
 pnpm inject
 ```
 
