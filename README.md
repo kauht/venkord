@@ -3,8 +3,9 @@
 A custom Vencord fork including the recently removed nsfwGateBypass plugin.
 
 ## Requirements
-- Node.js
-- PNPM package manager
+- [Git](https://git-scm.com/downloads/win)
+- [Node.js](https://nodejs.org/en/download)
+- [PNPM package manager](https://pnpm.io/installation)
 
 ## Installation
 ```bash
