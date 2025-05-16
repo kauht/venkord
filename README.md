@@ -21,4 +21,4 @@ pnpm inject
 ```
 
 ## Support
-For assistance or questions, contact me through discord @kauht.
+For assistance or questions, contact me through my discord server at https://discord.gg/jgZXb7NUhE or add me @kauht.
