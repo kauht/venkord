@@ -17,6 +17,12 @@ cd venkord
 ```
 
 ```bash
+pnpm install
+```
+
+`pnpm build OR pnpm buildWeb` OR `pnpm buildWeb` if you are building for web
+
+```bash
 pnpm inject
 ```
 
