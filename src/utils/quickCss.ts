@@ -39,7 +39,7 @@ async function initSystemValues() {
     createStyle("vencord-os-theme-values").textContent = `:root{${variables}}`;
 }
 
-export async function toggle(isEnabled: boolean) {
+async function toggle(isEnabled: boolean) {
     if (!style) {
         if (isEnabled) {
             style = createStyle("vencord-custom-css");
@@ -91,7 +91,10 @@ async function initThemes() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    if (IS_USERSCRIPT) return;
+
     initSystemValues();
+    initThemes();
 
     toggle(Settings.useQuickCss);
     SettingsStore.addChangeListener("useQuickCss", toggle);
@@ -102,11 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!IS_WEB) {
         VencordNative.quickCss.addThemeChangeListener(initThemes);
     }
-
-    initThemes();
-});
+}, { once: true });
 
 export function initQuickCssThemeStore() {
+    if (IS_USERSCRIPT) return;
+
     initThemes();
 
     let currentTheme = ThemeStore.theme;
